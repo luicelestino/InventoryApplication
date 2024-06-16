@@ -4,8 +4,15 @@ Welcome to Java Frameworks! This is an opportunity for students to implement use
 FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
+Changed the title from "My Bicycle Shop" to "Lui's Gaming PC Store" in line 14
+Changed header from "Shop" to "PC Shop" in line 19
+Changed header from "Parts" to "PC Parts" in line 21
+Changed header from "Products" to "Pre-built PC's" in line 53
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+Added an AboutPageController.java file with new code from lines 1-14
+Added an aboutpage.html file with new code from lines 1-16
+Changed line 19 in mainscreen.html by adding a new button that leads to the aboutpage.html
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
