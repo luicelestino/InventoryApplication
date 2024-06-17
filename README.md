@@ -15,6 +15,11 @@ Added an aboutpage.html file with new code from lines 1-16
 Changed line 19 in mainscreen.html by adding a new button that leads to the aboutpage.html
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
+Added an import statement in line 4 to import InhousePart from domain
+Added an import statement in line 8 to import InhousePartRepository from repositories
+Added an if statement that would populate data with parts and products if repository was empty in lines 64 and 117
+Added parts "RTX 4080", "i7 13700K", "B650 GAMING PLUS WIFI ATX AM5", "Corsair", & "RTX 4080 Compatible Case" in lines 65-102 and saved to repository
+Added products "Base Edition", "Gold Edition", "Platinum Edition", "Diamond Edition", & "Pro Edition" in lines 118-122 and saved to repository
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 •  The “Buy Now” button must be next to the buttons that update and delete products.
