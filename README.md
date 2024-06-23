@@ -22,9 +22,10 @@ Added parts "RTX 4080", "i7 13700K", "B650 GAMING PLUS WIFI ATX AM5", "Corsair",
 Added products "Base Edition", "Gold Edition", "Platinum Edition", "Diamond Edition", & "Pro Edition" in lines 118-122 and saved to repository
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
-•  The “Buy Now” button must be next to the buttons that update and delete products.
-•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
-•  Display a message that indicates the success or failure of a purchase.
+Added a "Buy Now" button in line 87 of mainscreen.html that links to buyproduct
+Added a BuyNowController.java file with new code from lines 1-41
+Added a purchaseconfirmation.html file with new code from lines 1-13
+Added a purchaseerror.html file with new code from lines 1-13
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
 •  Add additional fields to the part entity for maximum and minimum inventory.
