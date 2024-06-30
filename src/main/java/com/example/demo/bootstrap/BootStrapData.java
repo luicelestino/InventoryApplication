@@ -68,6 +68,8 @@ public class BootStrapData implements CommandLineRunner {
             graphicsCard.setInv(4);
             graphicsCard.setPrice(1099.99);
             graphicsCard.setId(121);
+            graphicsCard.setMinInv(0);
+            graphicsCard.setMaxInv(99);
             outsourcedPartRepository.save(graphicsCard);
 
             OutsourcedPart cpu = new OutsourcedPart();
@@ -76,6 +78,8 @@ public class BootStrapData implements CommandLineRunner {
             cpu.setInv(11);
             cpu.setPrice(409.99);
             cpu.setId(122);
+            cpu.setMinInv(0);
+            cpu.setMaxInv(99);
             outsourcedPartRepository.save(cpu);
 
             OutsourcedPart mobo = new OutsourcedPart();
@@ -84,6 +88,8 @@ public class BootStrapData implements CommandLineRunner {
             mobo.setInv(8);
             mobo.setPrice(169.99);
             mobo.setId(123);
+            mobo.setMinInv(0);
+            mobo.setMaxInv(99);
             outsourcedPartRepository.save(mobo);
 
             OutsourcedPart psu = new OutsourcedPart();
@@ -92,6 +98,8 @@ public class BootStrapData implements CommandLineRunner {
             psu.setInv(10);
             psu.setPrice(129.99);
             psu.setId(124);
+            psu.setMinInv(0);
+            psu.setMaxInv(99);
             outsourcedPartRepository.save(psu);
 
             InhousePart tower = new InhousePart();
@@ -99,6 +107,9 @@ public class BootStrapData implements CommandLineRunner {
             tower.setName("RTX 4080 Compatible Case");
             tower.setInv(5);
             tower.setPrice(134.99);
+            tower.setId(125);
+            tower.setMinInv(0);
+            tower.setMaxInv(99);
             inhousePartRepository.save(tower);
         }
 

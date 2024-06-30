@@ -28,7 +28,10 @@ public abstract class Part implements Serializable {
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
-
+    @Min(value = 0, message = "Inventory value must be positive")
+    int minInv;
+    // @Max(value = 99, message = "Inventory value must be no greater than 99")
+    int maxInv;
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
             inverseJoinColumns=@JoinColumn(name="product_id"))
@@ -48,6 +51,15 @@ public abstract class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+    }
+
+    public Part(long id, String name, double price, int inv, int minInv, int maxInv) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.inv = inv;
+        this.minInv = minInv;
+        this.maxInv = maxInv;
     }
 
     public long getId() {
@@ -82,6 +94,14 @@ public abstract class Part implements Serializable {
         this.inv = inv;
     }
 
+    public int getMinInv() { return minInv; }
+
+    public void setMinInv(int minInv) { this.minInv = minInv; }
+
+    public int getMaxInv() { return maxInv; }
+
+    public void setMaxInv(int maxInv) { this.maxInv = maxInv; }
+
     public Set<Product> getProducts() {
         return products;
     }
@@ -106,5 +126,11 @@ public abstract class Part implements Serializable {
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
+    }
+
+    public void isPartInvValid() {
+        if (this.inv > this.maxInv || this.inv < this.minInv) {
+            throw new RuntimeException("This value falls outside of the minimum and maximum range allowed");
+        }
     }
 }
