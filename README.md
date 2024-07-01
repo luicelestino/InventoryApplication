@@ -43,5 +43,6 @@ Added a ValidMinParts.java and MinPartsValidator.java file with new code from li
 Added a ValidMaxParts.java and MaxPartsValidator.java file with new code from lines 1-17 and 1-21 respectively that displays an error when adding or updating a part lowers the part inventory below the minimum
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+Added 4 unit tests for the getters/setters for the maximum and minimum fields from lines 160-194
 
 J.  Remove the class files for any unused validators in order to clean your code.
