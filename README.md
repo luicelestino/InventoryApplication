@@ -28,16 +28,19 @@ Added a purchaseconfirmation.html file with new code from lines 1-13
 Added a purchaseerror.html file with new code from lines 1-13
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
-•  Add additional fields to the part entity for maximum and minimum inventory.
-•  Modify the sample inventory to include the maximum and minimum fields.
-•  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
-•  Rename the file the persistent storage is saved to.
-•  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+Added additional fields to the Part.java file for maximum and minimum inventory getters/setters in lines 56-62 and 97-103
+Modified BootStrapData.java to include the minimum and maximum inventory in lines 71-72, 81-82, 91-92, 101-102 and 110-112
+Added text inputs for minimum and maximum inventory in the InhousePartForm.html file in lines 26-33
+Added text inputs for minimum and maximum inventory in the OutsourcedPartForm.html in lines 25-30
+Renamed the name of the database in the application.properties file in line 6
+Added an isPartInvValid method to the Part.java file in lines 131-135
+Called the isPartInvValid method in the PartServiceImpl.java file in line 59
+Called the isPartInvValid method in the InhousePartServiceImpl.java file in line 54
+Called the isPartInvValid method in the OutsourcedPartServiceImpl.java file in line 58
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
-•  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
-•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
-•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+Added a ValidMinParts.java and MinPartsValidator.java file with new code from lines 1-17 and 1-20 respectively that displays an error when adding or updating a part both below and above the minimum and maximum
+Added a ValidMaxParts.java and MaxPartsValidator.java file with new code from lines 1-17 and 1-21 respectively that displays an error when adding or updating a part lowers the part inventory below the minimum
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
